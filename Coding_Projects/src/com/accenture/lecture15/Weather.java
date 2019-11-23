@@ -10,17 +10,17 @@ public class Weather {
 	private int[] daysWeather;
 
 	// this is a constructor, which names the country and uses the array
-	Weather(String country, int[] daysWeather) {
+	public Weather(String country, int[] daysWeather) {
 		this.country = country;
 		this.daysWeather = daysWeather;
 
 	}
 
-	String getCountry() {
+	public String getCountry() {
 		return this.country;
 	}
 
-	int[] getDaysWeather() {
+	public int[] getDaysWeather() {
 		return daysWeather;
 	}
 
