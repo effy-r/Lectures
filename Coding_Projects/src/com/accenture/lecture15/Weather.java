@@ -134,10 +134,28 @@ public class Weather {
 
 		for (int i = 0; i < daysWeather.length; i++) {
 
-			this.daysWeather[i] = daysWeather[i] + 1;
+			this.daysWeather[i] += 1;
 
 		}
 
 	}
+	public static double celsiusToFahrenheit(double celsiusTemperature){
+		double farenheitTemperature = (celsiusTemperature *1.8)+32;
+		return farenheitTemperature;
+		
+	}
+	
+	
+	}
+	
+	// Task 15 - We need that someone would provide to us weather forecast
+			// for specific country
+			// - create a static method which will create a 7 day forecast for
+			// specific country
+			// public static Weather getWeatherForecast(String countryName)
+			// - google for random value generator, in order to fill day weather
+			// with some values
+			// Example:
+			// Weather lithuania = Weather.getWeatherForecast("Lithuania");
 
 }
