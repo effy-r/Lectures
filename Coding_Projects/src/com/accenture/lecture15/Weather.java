@@ -28,7 +28,6 @@ public class Weather {
 
 		return "Weather forecast for next 7 days for " + getCountry() + " is "
 				+ Arrays.toString(getDaysWeather());
-
 	}
 
 	private double getSumWeek() {
@@ -36,13 +35,11 @@ public class Weather {
 		for (int i = 0; i < daysWeather.length; i++) {
 			sum += daysWeather[i];
 		}
-
 		return sum;
 	}
 
 	public double getWeekAverage() {
 		double average = getSumWeek() / getDaysWeather().length;
-
 		return average;
 	}
 
@@ -61,12 +58,10 @@ public class Weather {
 				maxTemperature = daysWeather[j];
 				index = j;
 			}
-
 		return index;
 	}
 
 	public String getHottestDayName() {
-
 		return getDay(getHottestDayIndex() + 1);
 	}
 
@@ -85,10 +80,29 @@ public class Weather {
 
 	}
 
+	public int getColdestTemperature() {
+		return daysWeather[getColdestDayIndex()];
+
+	}
+
+	private int getColdestDayIndex() {
+		int coldestTemperature = daysWeather[0];
+		int index = 0;
+		for (int k = 0; k < daysWeather.length; k++)
+			if (coldestTemperature < daysWeather[k]) {
+				continue;
+			} else {
+				coldestTemperature = daysWeather[k];
+				index = k;
+
+			}
+		return index;
+
+	}
+
 	private String getDay(int index) {
 
 		int hottestDay = getHottestDayIndex() + 1;
-
 		String dayString = null;
 		switch (index) {
 		case 1:
@@ -114,26 +128,6 @@ public class Weather {
 			break;
 		}
 		return dayString;
-	}
-
-	public int getColdestTemperature() {
-		return daysWeather[getColdestDayIndex()];
-
-	}
-
-	private int getColdestDayIndex() {
-		int coldestTemperature = daysWeather[0];
-		int index = 0;
-		for (int k = 0; k < daysWeather.length; k++)
-			if (coldestTemperature < daysWeather[k]) {
-				continue;
-			} else {
-				coldestTemperature = daysWeather[k];
-				index = k;
-
-			}
-		return index;
-
 	}
 
 	public void applyWarmCycloneEffect() {
