@@ -45,8 +45,8 @@ public class ObjectPractice {
 		// Create toString method in Weather class
 		// Output:
 		// "Weather forecast in 'Latvia' for next days '-2, 0, 5, 2, 6, -1, 0'"
-		// System.out.println(latvia);
-		System.out.println(latvia.toString());
+		System.out.println(latvia);
+		System.out.println(antaliya);
 		
 		// Send a link of your github repository to lecturer in slack
 		// Wait until everyone will reach that point eiter ask for extra task

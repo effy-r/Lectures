@@ -30,27 +30,9 @@ public class Weather {
 
 	}
 
-	public void toString456() {
-		System.out.print("Weather forecast for next 7 days for " + getCountry()
-				+ " is ");
-		for (int i = 0; i <= daysWeather.length; i++) {
-			if (i < 6) {
-				System.out.print(daysWeather[i]);
-				System.out.print(", ");
 
-			} else
-			System.out.print(daysWeather[i]);
-			System.out.print(".");
-
-		}
 
 	}
 
-	// Task 6 - User should be able to get weather information in
-	// user-friendly way
-	// Create toString method in Weather class
-	// Output:
-	// "Weather forecast in 'Latvia' for next days '-2, 0, 5, 2, 6, -1, 0'"
-	// System.out.println(latvia);
 
-}
+
